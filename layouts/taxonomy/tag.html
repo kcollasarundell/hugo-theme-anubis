@@ -4,7 +4,7 @@
     <div class="article-info">
         <a href="{{ "tags/" | absURL }}">{{ i18n "toAllTags" | humanize}}</a>
     </div>
-    {{ range .Data.Pages }}
+    {{ range (.Paginate .Data.Pages).Data.Pages }}
     <article class="post-list">
         <header> 
             <h1>
@@ -23,5 +23,5 @@
 
     </article>
     {{ end }}
-
+    {{ partial "pagination.html" . }}
 {{ end }}

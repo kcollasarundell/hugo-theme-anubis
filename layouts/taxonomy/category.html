@@ -4,7 +4,7 @@
     <div class="article-info">
         <a href="{{ "categories/" | absURL }}">{{ i18n "toAllCategories" | humanize }}</a>
     </div>
-    {{ range .Data.Pages }}
+    {{ range (.Paginate .Data.Pages).Pages }}
     <article class="post-list">
         <header> 
             <h1>
@@ -23,5 +23,6 @@
         {{ end }} -->
     </article>
     {{ end }}
+    {{ partial "pagination.html" . }}
 
 {{ end }}
