@@ -1,8 +1,9 @@
 {{ define "main" }}
 
     <h1>{{ i18n .Title }}</h1>
-    {{ $pages := where site.RegularPages "Type" "in" .Section }}
-    {{ range (.Paginate $pages).Pages }}
+    {{ .Content }}
+    <ul class="contents">
+    {{ range sort .Paginator.Pages "Params.Date" "asc"}}
         <div class="post-short-list">
             <header> 
                 <h2>

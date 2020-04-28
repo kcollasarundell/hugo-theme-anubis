@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-    <h1>{{ i18n "category" | humanize }}: {{ .Title }}</h1>
+    <h1>{{ i18n "category" | humanize }}: {{ title .Title }}</h1>
     <div class="article-info">
         <a href="{{ "categories/" | absURL }}">{{ i18n "toAllCategories" | humanize }}</a>
     </div>
@@ -8,7 +8,7 @@
     <article class="post-list">
         <header> 
             <h1>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">{{ title .Title }}</a>
             </h1>
         </header>
 

@@ -100,7 +100,7 @@ pre {
     padding: 1em;
     background-color: #f1f1f1;
     max-width: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 code,
@@ -109,6 +109,7 @@ kbd {
     font-family: monospace;
     font-size: 0.90em;
     line-height: 154%;
+    overflow: auto;
 }
 
 /* Styles */
